@@ -86,3 +86,102 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
+.navbar-header .myblog {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 26px;
+}
+.navbar-default .myhead ul li {
+  padding: 3px 3px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.navbar-default .myhead ul li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.head_img {
+  background: url("../images/home-bg.jpg") no-repeat center center;
+  background-color: #777777;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+.head_img .head_content {
+  padding: 100px 0 50px;
+  color: #fff;
+  text-align: center;
+}
+.head_img .head_content h1 {
+  font-weight: 800;
+  font-size: 50px;
+}
+.head_img .head_content hr {
+  max-width: 100px;
+  margin: 15px auto;
+  border-width: 4px;
+  border-color: white;
+}
+.head_img .head_content span {
+  font-size: 24px;
+  line-height: 1.1;
+  display: block;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 10px 0 0;
+}
+.foot {
+  text-align: center;
+  margin: 60px 0px;
+}
+.foot .foot_icon a {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-color: #333;
+  border-radius: 50%;
+  line-height: 46px;
+  text-align: center;
+  margin: 0px 8px;
+}
+.foot .foot_icon a:hover {
+  background-color: #0085A1;
+}
+.foot p {
+  font-family: 'Times New Roman', serif;
+  font-size: 14px;
+  color: #777;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .navbar-default .navbar-header .myblog {
+    color: #fff;
+  }
+  .navbar-default .navbar-header .myblog:hover {
+    color: #eee;
+  }
+  .navbar-default .myhead ul {
+    float: right;
+  }
+  .navbar-default .myhead ul li :focus {
+    background-color: transparent;
+  }
+  .navbar-default .myhead ul li :hover {
+    background-color: transparent;
+    color: #eee;
+  }
+  .navbar-default .myhead ul li a {
+    color: #fff;
+  }
+  .head_img .head_content {
+    padding: 150px 0px;
+  }
+  .head_img .head_content h1 {
+    font-size: 80px;
+  }
+}

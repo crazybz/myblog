@@ -3,7 +3,7 @@
  */
 $(function () {
     var index = 1;
-
+    var up = $('<div class="no"> <span>不能往前了哟！</span> </div>');
     blogContent(index,5);
     function blogContent(pageindex,pagesize) {
         $.getJSON('http://localhost:8888/posts/getpage',{pageindex:pageindex,pagesize:pagesize},function (data) {
@@ -20,7 +20,12 @@ $(function () {
                         blogContent(index,5);
                         $('body').scrollTop(contentTop.top);
                     }else{
-                        alert('动画还没写');
+
+                        $('body').append(up);
+                        var timer = setTimeout(function () {
+                            $(up).remove();
+                        },2600)
+                        clearTimeout(timer);
                     }
                 })
                 $('#next').on('click',function () {
@@ -29,13 +34,17 @@ $(function () {
                         blogContent(index,5);
                         $('body').scrollTop(contentTop.top);
                     }else{
-                        alert('动画还没写');
+                        $(up).children().text('后面也没了哟！')
+                        $('body').append(up);
+                        var timer = setTimeout(function () {
+                            $(up).remove();
+                        },2600)
+                        clearTimeout(timer);
                     }
                 })
             })
         })
     }
-
 
 
 
