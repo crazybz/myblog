@@ -1,0 +1,197 @@
+//导航栏
+.navbar-header{
+  .myblog{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+  }
+}
+
+.navbar-default{
+  .myhead{
+    ul{
+      li{
+        padding: 3px 3px;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        a{
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+.head_img{
+  background: url("../images/home-bg.jpg") no-repeat center center;
+  background-color: #777777;
+  background-attachment: scroll;
+  background-size: cover;
+  margin-bottom: 50px;
+  .head_content{
+    padding: 100px 0 50px;
+    color: #fff;
+    text-align: center;
+    h1{
+      font-weight: 800;
+      font-size: 50px;
+    }
+    hr{
+      max-width: 100px;
+      margin: 15px auto;
+      border-width: 4px;
+      border-color: white;
+    }
+    span{
+      font-size: 24px;
+      line-height: 1.1;
+      display: block;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      margin: 10px 0 0;
+    }
+  }
+}
+
+//博客内容
+.post-preview{
+  margin: 30px 0px;
+  a{
+    h2{
+      font-size: 30px;
+    }
+    h3{
+      margin-top: 10px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+  }
+  p{
+    color: #777777;
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Times New Roman', serif;
+  }
+}
+//翻页按钮
+.pager{
+  li{
+    a{
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 15px 25px;
+      background-color: white;
+      border-radius: 0;
+    }
+    a:hover{
+      color: white;
+      background-color: #0085A1;
+      border: 1px solid #0085A1;
+    }
+  }
+}
+
+//翻页警告框
+.no{
+  width: 126px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  margin-left: -63px;
+  opacity: 0;
+  transition: all .5s;
+}
+.no_show{
+  opacity: 1;
+}
+
+//页面底部
+.foot{
+  text-align: center;
+  margin: 60px 0px;
+  .foot_icon{
+    a{
+      display: inline-block;
+      width: 46px;
+      height: 46px;
+      background-color: #333;
+      border-radius: 50%;
+      line-height: 46px;
+      text-align: center;
+      margin: 0px 8px;
+    }
+    a:hover{
+      background-color: #0085A1;
+    }
+  }
+  p{
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    color: #777;
+    margin-top: 40px;
+  }
+}
+
+//响应式适配
+@media only screen and (min-width: 768px){
+  //导航栏
+  .navbar-default{
+    background-color: transparent;
+    border-color: transparent;
+    .navbar-header{
+      .myblog{
+        color: #fff;
+      }
+      .myblog:hover{
+        color: #eee;
+      }
+    }
+    .myhead{
+      ul{
+        float: right;
+        li{
+          :focus{
+            background-color: transparent;
+          }
+          :hover{
+            background-color: transparent;
+            color: #eee;
+          }
+          a{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  //头部图片
+  .head_img{
+    .head_content{
+      padding: 150px 0px;
+      h1{
+        font-size: 80px;
+      }
+    }
+  }
+
+  //博客内容
+  .post-preview{
+    a {
+      h2 {
+        font-size: 36px;
+      }
+    }
+  }
+
+}

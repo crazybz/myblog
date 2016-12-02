@@ -1,0 +1,75 @@
+body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+table{
+  border-collapse:collapse;
+}
+body {
+  font-family: "Microsoft YaHei";
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input,textarea{
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none; /* 组件默认的样式为空 */
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+}
+a:hover{
+  text-decoration: none;
+}
+
+input, textarea {
+  outline: none;
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::after,
+.clearfix::before{
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
