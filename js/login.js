@@ -31,32 +31,25 @@ jQuery(document).ready(function() {
 
 
     // 登录验证
-    var up = $('<div class="no"> <span>登录失败</span> </div>');
+    var up = $('<div class="no"> 登录失败 </div>');
     $('#send').click(function () {
         var data = $('#form').serialize();
-        var data1 = data.replace('username=&password=','');
-        console.log(data1);
-        if(data == ""){
-
-        }
         $.ajax({
             type:"post",
             url:"http://localhost:8888/account/login",
             data:data,
             success:function (data) {
                 if(data.code === 1){
-                    location.href = "http://localhost:8888/admin/posts/index";
+                    layer.msg('登录成功');
+                    location.href = "index.html";
                 }else{
-                    $('body').append(up);
-                    var timer = setTimeout(function () {
-                        $(up).remove();
-                    },2600)
-                    clearTimeout(timer);
+                    layer.msg('登录失败');
                 }
             }
         })
         return false;
     })
+
 
 
 });

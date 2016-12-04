@@ -20,12 +20,7 @@ $(function () {
                         blogContent(index,5);
                         $('body').scrollTop(contentTop.top);
                     }else{
-
-                        $('body').append(up);
-                        var timer = setTimeout(function () {
-                            $(up).remove();
-                        },2600)
-                        clearTimeout(timer);
+                        layer.msg('不能往前了哟！');
                     }
                 })
                 $('#next').on('click',function () {
@@ -34,12 +29,7 @@ $(function () {
                         blogContent(index,5);
                         $('body').scrollTop(contentTop.top);
                     }else{
-                        $(up).children().text('后面也没了哟！')
-                        $('body').append(up);
-                        var timer = setTimeout(function () {
-                            $(up).remove();
-                        },2600)
-                        clearTimeout(timer);
+                        layer.msg('后面也没了哟！');
                     }
                 })
             })

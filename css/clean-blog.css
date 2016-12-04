@@ -480,6 +480,9 @@ form.row textarea {
   resize: vertical;
 }
 
+.media-body{
+  width: 1000px;
+}
 .media-body p {
   margin: 0;
 }

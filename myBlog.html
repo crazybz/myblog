@@ -63,13 +63,14 @@
             <p>Copyright © Your Website 2016</p>
     </footer>
 
-    <!--翻页警告框-->
+
+    <textarea name="" id="test" cols="30" rows="10"></textarea>
 
 
     <script id="blog_msg" type="text/html">
         {{each result as value i}}
         <div class="post-preview">
-            <a href="news.html/{{value.id}}">
+            <a href="post.html?{{value.id}}">
                 <h2 class="post-title">{{value.title}}</h2>
                 <h3 class="post-subtitle">{{value.excerpt}}</h3>
             </a>
@@ -86,6 +87,14 @@
     <script src="lib/template.js"></script>
     <script src="lib/jquery-1.12.2.min.js"></script>
     <script src="lib/bootstrap.js"></script>
+    <script src="lib/layer/build/layer.js"></script>
     <script src="js/myBlog.js"></script>
+
+    <script>
+        $(function () {
+           var a ="<h3>2016年房产消费创投趋势探讨---IT桔子沙龙</h3><p><i>时间:</i>&nbsp;<i>05-21 13:30 - 17:00</i></p><p><i>地点:</i><i>上海 - 江湾体育场</i><br></p><ul></ul><h4>活动内容</h4><p>房产消费作为互联网+中的巨额市场一直备受关注，围绕房产的O2O覆盖租房、买房、装修几大领域，再加上创业火热、小微企业增多，商业地产、办公室租房、众创空间这类服务也纷纷登场。房产的客单价足够高，围绕房贷、分期支付的消费金融也在这个领域得到了更快的发展。</p><p>刚刚过去四分之一的2016年，联合办公空间纷纷融资，住百家、美房云客等房产企业挂牌新三板，魔方公寓迎来C轮3亿美金融资，链家扑朔迷离的巨额融资后启动上市计划，然而不管是孵化器、亦或是长租、短租公寓，火热的背后同样备受质疑。</p><p>如今的房产+互联网是否正在经历寒冬？房产交易型创业公司如何与传统大平台竞争？在重度依赖线下的行业中如何打造出新的模式？投资人眼中房产行业还存在哪些创业机会？本期IT桔子沙龙，我们将邀请创业者和投资人共同探讨。</p><p>议程：</p><p>13:30-14:00签到入场</p><p>14:00-14:15活动介绍及开场</p><p>14:15-14:45 IT桔子盘点房产领域创业投资数据信息</p><p>14:45-16:45创业公司主题演讲+互动问答</p><p>16:45-17:30投资人分享：投资房产消费领域的观点和看法</p><p><a target=\"_blank\" href=\"http://huodong.tuicool.com/huodong/goto?id=572b4a46651a5ece5e2527a6\">去官网报名</a><br></p><p><br></p>"
+            $('#test').val(a);
+        })
+    </script>
 </body>
 </html>
