@@ -157,9 +157,9 @@
                                     <thead>
                                     <tr>
                                         <th>序号</th>
-                                        <th>用户</th>
-                                        <th>创建时间</th>
-                                        <th>操作</th>
+                                        <th>昵称</th>
+                                        <th>用户名</th>
+                                        <th>操作时间</th>
                                     </tr>
                                     </thead>
                                     <tbody id="blogContent">
@@ -231,6 +231,7 @@
     <tr>
         <td>{{i+1}}</td>
         <td>{{value.slug}}</td>
+        <td>{{value.username}}</td>
         <td>{{value.created}}</td>
         <td>
             <button data-id="{{value.id}}" type="button" class="btn btn-primary lbtn">编辑</button>

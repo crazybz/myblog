@@ -12,6 +12,7 @@ $(function () {
 // 获取帖子内容
 var getContent = function() {
     $.getJSON('http://localhost:8888/admin/users',function (data) {
+        console.log(data);
         var html = template('trlist',{list:data});
         $('#blogContent').html(html);
     })
@@ -68,7 +69,7 @@ var modifyContent = function () {
                     user = $('#user').val(),
                     password = $('#password').val();
                 $.ajax({
-                    type:'post',
+                    type:'POST',
                     url:'http://localhost:8888/admin/users/update/'+dataId,
                     data:{nickname:username,username:user,password:password},
                     success:function (data) {
