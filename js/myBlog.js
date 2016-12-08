@@ -3,12 +3,12 @@
  */
 $(function () {
     var index = 1;
-    var up = $('<div class="no"> <span>不能往前了哟！</span> </div>');
     blogContent(index,5);
     function blogContent(pageindex,pagesize) {
         $.getJSON('http://localhost:8888/posts/getpage',{pageindex:pageindex,pagesize:pagesize},function (data) {
             var obj = {};
             obj.result = data;
+            console.log(data);
             var html = template('blog_msg',obj);
             $('.blog_content').html(html);
             // 上下页实现

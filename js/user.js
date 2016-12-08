@@ -53,7 +53,7 @@ var getSearch = function() {
     })
 // 根据id获取帖子修改内容
 var modifyContent = function () {
-    $('#blogContent').on('click','.lbtn',function () {
+    $('#blogContent').off('click').on('click','.lbtn',function () {
         // 显示编辑窗口
         $('#myModalLabel').text('修改用户');
         $('#myModal').modal('show');
@@ -64,7 +64,7 @@ var modifyContent = function () {
             $('#user').val(data.username);
             $('#password').val(data.password);
             // 保存按钮实现
-            $('#btnSave').on('click',function () {
+            $('#btnSave').off('click').on('click',function () {
                 var username = $('#username').val(),
                     user = $('#user').val(),
                     password = $('#password').val();
@@ -90,8 +90,8 @@ var modifyContent = function () {
 
 // 添加帖子
 var addContent = function () {
-    $('#addContent').click(function () {
-        $('#btnSave').click(function () {
+    $('#addContent').off('click').click(function () {
+        $('#btnSave').off('click').click(function () {
             var username = $('#username').val(),
                 user = $('#user').val(),
                 password = $('#password').val();

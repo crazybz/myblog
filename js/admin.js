@@ -44,7 +44,7 @@ $(function () {
     })
     // 根据id获取帖子修改内容
     var modifyContent = function () {
-        $('#blogContent').on('click','.lbtn',function () {
+        $('#blogContent').off('click').on('click','.lbtn',function () {
             // 显示编辑窗口
             $('#myModalLabel').text('编辑帖子');
             $('#myModal').modal('show');
@@ -54,7 +54,7 @@ $(function () {
                 $('#title').val(data.data.title);
                 ue.setContent(data.data.content);
                 // 保存按钮实现
-                $('#btnSave').on('click',function () {
+                $('#btnSave').off('click').on('click',function () {
                     var nowTitle = $('#title').val();
                     var nowContent = ue.getContent();
                     $.ajax({
@@ -78,8 +78,8 @@ $(function () {
     
     // 添加帖子
     var addContent = function () {
-        $('#addContent').click(function () {
-            $('#btnSave').click(function () {
+        $('#addContent').off('click').click(function () {
+            $('#btnSave').off('click').click(function () {
                 var dataTitle = $('#title').val(),
                     dataContent = ue.getContent();
                 $.ajax({
